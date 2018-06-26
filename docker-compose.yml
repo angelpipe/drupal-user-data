@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  drupal:
+    image: drupal:8-apache
+    ports:
+      - 80:80
+    volumes:
+      - ./modules:/var/www/html/modules
+      - ./profiles:/var/www/html/profiles
+      - ./themes:/var/www/html/themes
+      - ./sites:/var/www/html/sites
+
+  mysql:
+    image: mysql:5
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: drupal
+    volumes:
+      - ./db:/var/lib/mysql

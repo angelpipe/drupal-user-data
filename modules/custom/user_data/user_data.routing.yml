@@ -1,0 +1,23 @@
+user_data.form:
+  path: '/user-data'
+  defaults:
+    _form: '\Drupal\user_data\Form\DataForm'
+    _title: 'User Registration'
+  requirements:
+    _permission: 'access content'
+
+entity.user_data_contact.collection:
+  path: '/user-data/list'
+  defaults:
+    _entity_list: 'user_data_contact'
+    _title: 'Registered Users List'
+  requirements:
+    _permission: 'access content'
+
+entity.user_data_contact.delete_form:
+  path: '/user-data/{user_data_contact}/delete'
+  defaults:
+    _entity_form: user_data_contact.delete
+    _title: 'Delete Contact'
+  requirements:
+    _permission: 'access content'

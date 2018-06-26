@@ -1,0 +1,11 @@
+user_data.register:
+  title: 'User Registration'
+  parent: main
+  menu_name: main
+  route_name: user_data.form
+
+user_data_contact.list:
+  title: 'Registered Users List'
+  parent: main
+  menu_name: main
+  route_name: entity.user_data_contact.collection

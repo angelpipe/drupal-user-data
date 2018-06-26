@@ -1,0 +1,5 @@
+name: User Data Requestor
+type: module
+description: 'Requests user data in a multi step form'
+core: 8.x
+package: Custom
